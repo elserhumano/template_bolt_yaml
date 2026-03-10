@@ -44,6 +44,6 @@ chmod +x 01-launch-plan.sh
 
 
 ## 🌟 Why this Template?
-✅ Zero Friction: Start automating in minutes, not hours. ⏱️
-✅ YAML Driven: Easy to read, easy to maintain, easy to love. ❤️
-✅ Best Practices: Follows the official Puppet structure for seamless scaling. 📈
+*   **✅ Zero Friction**: Start automating in minutes, not hours. ⏱️
+*   **✅ YAML Driven**: Easy to read, easy to maintain, easy to love. ❤️
+*   **✅ Best Practices**: Follows the official Puppet structure for seamless scaling. 📈
