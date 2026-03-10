@@ -1,3 +1,48 @@
+# inventory.yaml
+# ============================================================
+# PARAMETRIZED INVENTORY - Bolt Lab
+#
+# TARGET GROUPS:
+#   All nodes → targets: all
+#   The one   → targets: control_plane
+#   Another   → targets: workers
+# ============================================================
 ---
+# ── Global variables ────────────────────────────────
+vars:
+  # Some nice comments ;)
+  var_inventory_01: "xxx"    # Also here... ;)
+  var_inventory_02: "yyyyy"  # You can comment... ;)
+  var_inventory_03: "zz"
 
+# ── Node groups ─────────────────────────────────────────────
 groups:
+
+  - name: group_01
+    targets:
+      - name: a-server-name
+        uri: 192.168.167.10
+        vars:
+          node_ip: "192.168.167.10"
+          vm_cpus: 2
+          vm_memory_mb: 3072
+
+  - name: group_02
+    targets:
+      - name: another-server-name
+        uri: 192.168.167.11
+        vars:
+          node_ip: "192.168.167.11"
+          vm_cpus: 2
+          vm_memory_mb: 2560
+
+
+# ── SSH connection config ───────────────────────────────────
+# Credentials are handled via SSH keys configured in the system.
+# run-as: root is required — all tasks write to system paths.
+config:
+  transport: ssh
+  ssh:
+    host-key-check: false
+    connect-timeout: 120
+    run-as: root

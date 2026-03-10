@@ -1,0 +1,10 @@
+# .gitignore
+.vagrant/
+*.log
+*.bak
+/tmp/
+kubeconfig-*.yaml
+*private_key*
+.bolt/
+.rerun.json
+

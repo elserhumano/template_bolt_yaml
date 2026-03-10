@@ -1,0 +1,42 @@
+# Master plan to install and configure something
+# Format: Puppet Bolt YAML plan
+#
+# Use:
+#   bolt plan run bolt_project_name::bolt_plan --targets groups_defined_in_inventory
+#
+# The parameters can put in a explicit way or define as vars in the inventory.
+# When vars are use in inventory.yaml, you cand put in this way:
+#   bolt plan run bolt_project_name::bolt_plan --targets groups_defined_in_inventory \
+#     db_password=xxxxx proxy_hostname=yyyyy ...
+
+parameters:
+  targets:
+    type: TargetSpec
+    description: "Targets where install or configure something"
+  db_password:
+    type: String
+    description: "Initial password for the DB"
+  proxy_hostname:
+    type: String
+    description: "For example is the hostname of a proxy server"
+
+steps:
+
+  # -------------------------------------------------------
+  # STEP 1 - Do something
+  # -------------------------------------------------------
+  - name: update_os
+    description: "Updating OS..."
+    command: "dnf -y update"
+    targets: $targets
+
+  # -------------------------------------------------------
+  # STEP 2 - Continue doing something else! ;)
+  # -------------------------------------------------------
+  # Can add here a nice comment! ;)
+  - name: add_repo_for_example
+    description: "Adding a repo example..."
+    task: bolt_project_name::example_task
+    targets: $targets
+    parameters:
+      os_version: $os_version

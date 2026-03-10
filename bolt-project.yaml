@@ -1,0 +1,10 @@
+# bolt-project.yaml
+# Puppet Bolt project definition for the Kubernetes lab.
+# In Bolt 4.x, SSH config goes in inventory.yaml — not here.
+---
+name: the_bolt_project_lab
+
+modules:
+  - name: puppetlabs-stdlib
+  - name: puppetlabs-facts
+

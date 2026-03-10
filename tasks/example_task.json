@@ -1,0 +1,35 @@
+{
+  "description": "Runs kubeadm init on the master node and configures kubectl",
+  "parameters": {
+    "node_ip": {
+      "type": "String",
+      "description": "Master node IP on the host-only network",
+      "default": "192.168.167.10"
+    },
+    "pod_network_cidr": {
+      "type": "String",
+      "description": "Pod network CIDR",
+      "default": "10.244.0.0/16"
+    },
+    "service_cidr": {
+      "type": "String",
+      "description": "Service CIDR",
+      "default": "10.96.0.0/12"
+    },
+    "k8s_version": {
+      "type": "String",
+      "description": "Kubernetes version",
+      "default": "1.30"
+    },
+    "cluster_name": {
+      "type": "String",
+      "description": "Cluster name",
+      "default": "k8s-lab"
+    },
+    "node_ip_interface": {
+      "type": "String",
+      "description": "Host-only network interface name",
+      "default": "enp0s8"
+    }
+  }
+}
