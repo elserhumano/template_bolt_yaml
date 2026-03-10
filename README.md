@@ -36,16 +36,12 @@ chmod +x 01-launch-plan.sh
 
 ## 🛠️ Key Components
 
-⚙️ bolt-project.yaml
-The brain. Defines where your modules are and project-wide settings. 🧠
-🌐 inventory.yaml
-Your source of truth. Group your servers by environment (dev, prod) and set up SSH/WinRM credentials once. 🔐
-🗺️ plans/
-Written in YAML, these allow you to chain tasks, scripts, and commands together without writing a single line of Ruby or Puppet DSL. Pure elegance. 🎨
-🛠️ tasks/
-The specialized tools. Use example_task.sh for quick scripts and example_task.json to define your parameters.
-🙈 .gitignore
-Pre-configured to keep your logs/, .resource_types/, and sensitive rerun.json files away from the public eye. Safety first! 🛡️
+*   **⚙️ bolt-project.yaml**: The brain. Defines where your modules are and project-wide settings. 🧠
+*   **🌐 inventory.yaml**: Your source of truth. Group your servers by environment (dev, prod) and set up SSH/WinRM credentials once. 🔐
+*   **🗺️ plans/**: Written in YAML, these allow you to chain tasks, scripts, and commands together without writing a single line of Ruby or Puppet DSL. Pure elegance. 🎨
+*   **🛠️ tasks/**: The specialized tools. Use `example_task.sh` for quick scripts and `example_task.json` to define your parameters. 🛠️
+*   **🙈 .gitignore**: Pre-configured to keep your `logs/`, `.resource_types/`, and sensitive `rerun.json` files away from the public eye. Safety first! 🛡️
+
 
 ## 🌟 Why this Template?
 ✅ Zero Friction: Start automating in minutes, not hours. ⏱️
