@@ -25,9 +25,9 @@ This is how a professional Bolt project looks. Clean, modular, and ready to scal
 
 ## 🔥 Quick Start
 
-Clone it: Get this juice into your local machine. 📥
-Target your Nodes: Open inventory.yaml and add your server IPs or hostnames. 🎯
-Ignition: Run the helper script to execute your first plan:
+1. **Clone it**: Get this juice into your local machine. 📥
+2. **Target your Nodes**: Open inventory.yaml and add your server IPs or hostnames. 🎯
+3. **Ignition**: Run the helper script to execute your first plan:
 
 ```
 chmod +x 01-launch-plan.sh
